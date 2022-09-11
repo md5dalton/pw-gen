@@ -26,7 +26,6 @@ export default ({ changeHandler, ...props }) => {
                 <div ref={progress} className="range-progress" style={{width: getprogress(value || defaultValue || 0)}}></div>
             </div>
             <input id="range-slider" ref={input} {...props} type="range" onChange={changeHandler} />
-            <label htmlFor="range-slider"></label>
         </div>
     )
 }
