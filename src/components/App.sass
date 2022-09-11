@@ -38,6 +38,12 @@ main
         img
             height: 24px
 
+    @include tablet
+        @include padding(1.5rem 1rem)
+
+        button img
+            height: 24px
+
 .config
     margin-top: 1rem
 
@@ -81,12 +87,6 @@ main
 
     @include tablet
         padding: 30px 2rem
-
-        .result
-            @include padding(3rem 1rem)
-
-            button img
-                height: 24px
                     
         .length .header-wrapper
             margin-bottom: 1rem
