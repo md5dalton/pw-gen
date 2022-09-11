@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Button from '../../UI/Button'
 import Icon from '../../UI/Icon'
 
-export default  ({ text }) => {
+export default  ({ text, setCopied, copied }) => {
 
-    const [ copied, setCopied ] = useState(false)
+    // const [ copied, setCopied ] = useState(isCopied)
     
     const copyHandler = ev => {
 
@@ -13,8 +13,6 @@ export default  ({ text }) => {
         navigator.clipboard.writeText(text).then(() => setCopied(true))
 
     }
-    
-    console.log("copy button render")
 
     return (
         <Button onClick={copyHandler}>

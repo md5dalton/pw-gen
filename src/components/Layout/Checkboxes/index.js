@@ -1,6 +1,4 @@
 import React, { useContext } from 'react'
-import PasswordContext from '../../../context/PasswordContext'
-import usePassword from '../../../hooks/usePassword'
 import Checkbox from '../../UI/Checkbox'
 import List from '../../UI/List'
 

@@ -14,8 +14,8 @@ import "./App.sass"
 const App = () => {
     
     const { 
-        password, strength, options,
-        passwordHandler, setOption, generatePassword 
+        password, strength, copied, options,
+        passwordHandler, setCopied, setOption, generatePassword 
     } = usePassword()
     
     const { length } = options
@@ -38,7 +38,7 @@ const App = () => {
                             onChange={({ target }) => passwordHandler(target.value)}
                             placeholder="P4$5W0rD!" 
                         />
-                        <CopyButton text={password} />
+                        <CopyButton text={password} copied={copied} setCopied={setCopied} />
                     </div>
                     <div className="config">
                         <div className="length">
