@@ -35,6 +35,7 @@ const App = () => {
                             type="text" 
                             className="text-L"
                             value={password} 
+                            aria="password"
                             onChange={({ target }) => passwordHandler(target.value)}
                             placeholder="P4$5W0rD!" 
                         />
