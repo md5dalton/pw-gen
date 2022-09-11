@@ -15,8 +15,9 @@ main
     max-width: 540px
     
 .result, .config
-    background-color: var(--color-bg-b)
     @include padding
+    margin-top: 2rem
+    background-color: var(--color-bg-b)
 
 .result
     @include flex
@@ -38,7 +39,6 @@ main
             height: 24px
 
 .config
-    margin-top: 1rem
 
     .length .header-wrapper
         @include flex(space-between)
