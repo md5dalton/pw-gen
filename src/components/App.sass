@@ -16,11 +16,11 @@ main
     
 .result, .config
     @include padding
-    margin-top: 2rem
     background-color: var(--color-bg-b)
 
 .result
     @include flex
+    margin-top: 2rem
 
     input
         appearance: none
@@ -39,6 +39,7 @@ main
             height: 24px
 
 .config
+    margin-top: 1rem
 
     .length .header-wrapper
         @include flex(space-between)
@@ -82,7 +83,7 @@ main
         padding: 30px 2rem
 
         .result
-            @include padding(18px 1rem)
+            @include padding(1.5rem 1rem)
 
             button img
                 height: 24px
