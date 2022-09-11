@@ -1,14 +1,20 @@
 @use "../../../styles/util" as *
 
 @mixin thumb ()
+    @include transition
     appearance: none
-    border: none
+    border: solid transparent
     position: relative
     z-index: 1
     height: 28px
     width: 28px
     border-radius: 50%
     background: var(--color-text)
+
+    &:hover, &:active
+        border-color: var(--color-primary)
+        background: var(--color-bg)
+
 
 .slider
     @include flex()
