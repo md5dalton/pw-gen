@@ -1,0 +1,34 @@
+@use "../../../styles/util" as *
+
+.indicator, .bars .list
+    @include flex
+
+.indicator
+    gap: 1rem
+
+    span
+        text-transform: uppercase
+
+.bars
+    .list
+        gap: .5rem
+
+    &.too-weak .bar.fill
+        background-color: var(--color-state-too-weak)
+
+    &.weak .bar.fill
+        background-color: var(--color-state-weak)
+
+    &.medium .bar.fill
+        background-color: var(--color-state-medium)
+
+    &.strong .bar.fill
+        background-color: var(--color-state-strong)
+
+    .bar
+        height: 28px
+        width: 10px
+        border: solid 2px var(--color-text)
+
+        &.fill
+            border: none

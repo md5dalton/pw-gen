@@ -1,0 +1,21 @@
+@mixin flex ($justify: false, $align: center)
+    display: flex
+    align-items: $align
+
+    @if $justify
+        justify-content: $justify
+
+    @content
+    
+@mixin radius ($value: $borderRadius)
+    border-radius: $value
+
+@mixin transition ($value: all .5s cubic-bezier(.05, 0, 0, 1))
+    transition: $value
+
+@mixin padding ($value: 1rem)
+    padding: $value
+
+@mixin padding-x ($value: 2rem)
+    padding-left: $value
+    padding-right: $value

@@ -1,0 +1,19 @@
+// Small tablets and large smartphones (landscape view)
+$breakpoint-tablet: 576px
+
+// Tablets and small desktops
+$breakpoint-desktop: 992px
+
+@mixin mobile-only
+   @media (max-width: #{$breakpoint-tablet})
+       @content
+
+// Medium devices
+@mixin tablet
+   @media (min-width: #{$breakpoint-tablet})
+       @content
+
+// Extra large devices
+@mixin desktop
+   @media (min-width: #{$breakpoint-desktop})
+       @content

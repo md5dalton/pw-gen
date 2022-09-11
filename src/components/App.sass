@@ -1,0 +1,95 @@
+@use '../styles/globals' as *
+@use '../styles/util' as *
+
+main
+    @include flex(center)
+    min-height: 100vh
+
+.card
+    width: 100%
+    max-width: 540px
+    
+.result, .config
+    background-color: var(--color-bg-b)
+    @include padding
+
+.result
+    @include flex
+
+    input
+        appearance: none
+        background: none
+        border: none
+        outline: none
+        width: 100%
+
+    button
+        gap: 1rem
+
+        &:hover
+            filter: grayscale(1)
+
+        img
+            height: 24px
+
+.config
+    margin-top: 1rem
+
+    .length .header-wrapper
+        @include flex(space-between)
+        margin-bottom: .5rem
+
+    .strength
+        @include padding(14px 1rem)
+        @include flex(space-between)
+        margin-top: 2rem
+        background-color: var(--color-bg)
+
+    .submit-button
+        width: 100%
+        padding: 18px 0
+        margin-top: 1rem
+        background-color: var(--color-primary)
+        gap: 1rem
+
+        &:hover
+            background-color: var(--color-bg)
+
+            span 
+                color: var(--color-primary)
+                
+            path
+                fill: var(--color-primary)
+
+        span
+            color: var(--color-bg)
+
+    @include mobile-only
+        .strength > span
+            line-height: 21px
+            font-size: 1rem
+
+        .submit-button span
+            font-size: 1rem
+            line-height: 21px
+
+    @include tablet
+        padding: 30px 2rem
+
+        .result
+            @include padding(18px 1rem)
+
+            button img
+                height: 24px
+                    
+        .length .header-wrapper
+            margin-bottom: 1rem
+
+        .strength
+            @include padding(20px 2rem)
+
+        .submit-button
+            padding: 20px 0
+            margin-top: 2rem
+
+

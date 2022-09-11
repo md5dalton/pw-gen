@@ -1,0 +1,28 @@
+@use "../util" as *
+
+*, 
+*::before, 
+*::after
+    box-sizing: border-box
+
+body
+    margin: 0
+    padding: 0
+    background-color: var(--color-bg)
+    @include container-a
+
+button, input
+    appearance: none
+    border: none
+    outline: none
+    margin: 0
+
+button, input[type="checkbox"], input[type="range"], label
+    @include transition
+    cursor: pointer
+
+input[type="text"]
+    padding: 0
+
+.icon-wrapper
+    @include flex(center)

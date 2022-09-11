@@ -1,0 +1,22 @@
+@mixin layout ($maxWidth: 1400px)
+    padding: 0 1rem
+    margin: 0 auto
+    max-width: $maxWidth
+    
+%container-a
+    @include layout()
+
+%container-b
+    @include layout($maxWidth: 1200px)
+
+%container-c
+    @include layout($maxWidth: 900px)
+
+@mixin container-a
+    @include layout()
+
+@mixin container-b
+    @include layout($maxWidth: 1200px)
+
+@mixin container-c
+    @include layout($maxWidth: 900px)

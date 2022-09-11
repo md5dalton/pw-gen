@@ -1,0 +1,39 @@
+@use "../util" as *
+
+body, span, input[type="text"]
+    color: var(--color-text)
+    font-family: var(--font)
+    font-weight: 700
+
+body, span
+    font-size: 18px
+    line-height: 24px
+
+h1
+    text-align: center
+
+button
+    text-transform: uppercase
+
+.accent
+    color: var(--color-primary)
+
+.text-L
+    font-size: 24px
+    line-height: 32px
+
+.text-M
+    font-size: 21px
+    line-height: 21px
+
+.text-GREY
+    color: var(--color-text-grey)
+
+@include tablet
+    .text-L
+        font-size: 32px
+        line-height: 43px
+
+    .text-M
+        font-size: 24px
+        line-height: 32px
