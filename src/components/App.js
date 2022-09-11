@@ -33,12 +33,13 @@ const App = () => {
                     <div className="result">
                         <input 
                             type="text" 
+                            id="password"
                             className="text-L"
                             value={password} 
-                            aria="password"
                             onChange={({ target }) => passwordHandler(target.value)}
                             placeholder="P4$5W0rD!" 
                         />
+                        <label htmlFor="password"></label>
                         <CopyButton text={password} copied={copied} setCopied={setCopied} />
                     </div>
                     <div className="config">
